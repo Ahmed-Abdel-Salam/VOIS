@@ -2,42 +2,109 @@
 <testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-12T22:54:42 EET" name="Youtube Test Suite" finished-at="2025-04-12T22:55:38 EET" duration-ms="56372">
+  <suite started-at="2025-04-12T23:18:46 EET" name="Youtube Test Suite" finished-at="2025-04-12T23:20:22 EET" duration-ms="96658">
     <groups>
     </groups>
-    <test started-at="2025-04-12T22:54:42 EET" name="Chrome Test" finished-at="2025-04-12T22:55:38 EET" duration-ms="56372">
+    <test started-at="2025-04-12T23:18:46 EET" name="Chrome Test" finished-at="2025-04-12T23:20:22 EET" duration-ms="96658">
       <class name="com.tests.YoutubeSearch">
-        <test-method is-config="true" signature="setupTest()[pri:0, instance:com.tests.YoutubeSearch@35cabb2a]" started-at="2025-04-12T22:54:42 EET" name="setupTest" finished-at="2025-04-12T22:54:49 EET" duration-ms="7036" status="PASS">
+        <test-method is-config="true" signature="setupTest()[pri:0, instance:com.tests.YoutubeSearch@35cabb2a]" started-at="2025-04-12T23:18:46 EET" name="setupTest" finished-at="2025-04-12T23:18:57 EET" duration-ms="10841" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method is-config="true" signature="setupTest()[pri:0, instance:com.tests.YoutubeSearch@35cabb2a]" started-at="2025-04-12T22:54:42 EET" name="setupTest" finished-at="2025-04-12T22:55:13 EET" duration-ms="30656" status="PASS">
+        <test-method is-config="true" signature="setupTest()[pri:0, instance:com.tests.YoutubeSearch@35cabb2a]" started-at="2025-04-12T23:18:46 EET" name="setupTest" finished-at="2025-04-12T23:18:58 EET" duration-ms="11762" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="searchYoutubeAndAssertTenthResultIsCorrect()[pri:0, instance:com.tests.YoutubeSearch@35cabb2a]" started-at="2025-04-12T22:54:49 EET" name="searchYoutubeAndAssertTenthResultIsCorrect" finished-at="2025-04-12T22:55:19 EET" duration-ms="30090" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method signature="searchYoutubeAndAssertTenthResultIsCorrect()[pri:0, instance:com.tests.YoutubeSearch@35cabb2a]" started-at="2025-04-12T23:18:57 EET" name="searchYoutubeAndAssertTenthResultIsCorrect" finished-at="2025-04-12T23:19:05 EET" duration-ms="8031" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //input[@placeholder="Search"] (tried for 30 second(s) with 500 milliseconds interval)
+              <![CDATA[element click intercepted: Element <button class="yt-spec-button-shape-next yt-spec-button-shape-next--text yt-spec-button-shape-next--mono yt-spec-button-shape-next--size-m yt-spec-button-shape-next--icon-trailing yt-spec-button-shape-next--enable-backdrop-filter-experiment" aria-disabled="false" aria-label="Search filters" title="" style="">...</button> is not clickable at point (1733, 74). Other element would receive the click: <tp-yt-iron-overlay-backdrop opened="" class="opened" style="z-index: 2201;">...</tp-yt-iron-overlay-backdrop>
+  (Session info: chrome=135.0.7049.85)
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51736}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51736/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 045753db9cc1bb3466c99f55639b589d]]>
+Command: [e958166fd9cbb1fa066947ea772fb64e, clickElement {id=f.411980C16DEC79640B0D8FF33B0A37B8.d.6C087D835450CC711AB231535BC24E15.e.34}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50650}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50650/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (e958166fd9cbb1fa066947ea772fb64e)] -> xpath: //button[@aria-label="Search filters"]]
+Session ID: e958166fd9cbb1fa066947ea772fb64e]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@placeholder="Search"] (tried for 30 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="yt-spec-button-shape-next yt-spec-button-shape-next--text yt-spec-button-shape-next--mono yt-spec-button-shape-next--size-m yt-spec-button-shape-next--icon-trailing yt-spec-button-shape-next--enable-backdrop-filter-experiment" aria-disabled="false" aria-label="Search filters" title="" style="">...</button> is not clickable at point (1733, 74). Other element would receive the click: <tp-yt-iron-overlay-backdrop opened="" class="opened" style="z-index: 2201;">...</tp-yt-iron-overlay-backdrop>
+  (Session info: chrome=135.0.7049.85)
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51736}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51736/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 045753db9cc1bb3466c99f55639b589d
+Command: [e958166fd9cbb1fa066947ea772fb64e, clickElement {id=f.411980C16DEC79640B0D8FF33B0A37B8.d.6C087D835450CC711AB231535BC24E15.e.34}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50650}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50650/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (e958166fd9cbb1fa066947ea772fb64e)] -> xpath: //button[@aria-label="Search filters"]]
+Session ID: e958166fd9cbb1fa066947ea772fb64e
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at com.framework.ElementActions.click(ElementActions.java:16)
+at com.pages.YoutubeResultPage.clickOnFiltersButton(YoutubeResultPage.java:21)
+at com.tests.YoutubeSearch.searchYoutubeAndAssertTenthResultIsCorrect(YoutubeSearch.java:72)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchYoutubeAndAssertTenthResultIsCorrect -->
+        <test-method signature="searchYoutubeAndAssertThirdResultIsCorrect(java.lang.String)[pri:0, instance:com.tests.YoutubeSearch@35cabb2a]" started-at="2025-04-12T23:18:58 EET" name="searchYoutubeAndAssertThirdResultIsCorrect" data-provider="Search Keywords" finished-at="2025-04-12T23:19:37 EET" duration-ms="39531" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Selenium Tutorial]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: (//yt-formatted-string[contains(@class, 'ytd-watch-metadata')])[1] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50650}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50650/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e958166fd9cbb1fa066947ea772fb64e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//yt-formatted-string[contains(@class, 'ytd-watch-metadata')])[1] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50650}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50650/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e958166fd9cbb1fa066947ea772fb64e
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at com.framework.Waiting.waitUntilElementIsClickable(Waiting.java:13)
-at com.framework.ElementActions.typeText(ElementActions.java:45)
-at com.pages.YoutubeHomePage.searchYoutubeByKeyword(YoutubeHomePage.java:19)
-at com.tests.YoutubeSearch.searchYoutubeAndAssertTenthResultIsCorrect(YoutubeSearch.java:71)
+at com.framework.Waiting.waitUntilElementIsVisible(Waiting.java:18)
+at com.framework.ElementActions.getText(ElementActions.java:54)
+at com.pages.YoutubeVideoPage.getTitle(YoutubeVideoPage.java:17)
+at com.tests.YoutubeSearch.searchYoutubeAndAssertThirdResultIsCorrect(YoutubeSearch.java:65)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -59,87 +126,20 @@ at java.base/java.lang.Thread.run(Thread.java:1583)
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchYoutubeAndAssertTenthResultIsCorrect -->
-        <test-method signature="searchYoutubeAndAssertThirdResultIsCorrect(java.lang.String)[pri:0, instance:com.tests.YoutubeSearch@35cabb2a]" started-at="2025-04-12T22:55:13 EET" name="searchYoutubeAndAssertThirdResultIsCorrect" data-provider="Search Keywords" finished-at="2025-04-12T22:55:20 EET" duration-ms="6630" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Selenium Tutorial]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable: element has zero size
-  (Session info: chrome=135.0.7049.85)
-Build info: version: '4.20.0', revision: '866c76ca80'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [afdffdbf72a24cea6d956b121cdc3446, clickElement {id=f.901B16D47F880325F98348C1B47522F5.d.63D8D92E0DC6431E7FC17C6A110C83D2.e.119}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51737}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51737/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (afdffdbf72a24cea6d956b121cdc3446)] -> xpath: //ytd-video-renderer//a[@id='video-title']]
-Session ID: afdffdbf72a24cea6d956b121cdc3446]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
-  (Session info: chrome=135.0.7049.85)
-Build info: version: '4.20.0', revision: '866c76ca80'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [afdffdbf72a24cea6d956b121cdc3446, clickElement {id=f.901B16D47F880325F98348C1B47522F5.d.63D8D92E0DC6431E7FC17C6A110C83D2.e.119}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51737}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51737/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (afdffdbf72a24cea6d956b121cdc3446)] -> xpath: //ytd-video-renderer//a[@id='video-title']]
-Session ID: afdffdbf72a24cea6d956b121cdc3446
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at com.framework.ElementActions.getElementsByIndexAndClick(ElementActions.java:41)
-at com.pages.YoutubeResultPage.clickVideoByIndex(YoutubeResultPage.java:38)
-at com.tests.YoutubeSearch.searchYoutubeAndAssertThirdResultIsCorrect(YoutubeSearch.java:64)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- searchYoutubeAndAssertThirdResultIsCorrect -->
-        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:com.tests.YoutubeSearch@35cabb2a]" started-at="2025-04-12T22:55:19 EET" name="tearDownTest" finished-at="2025-04-12T22:55:20 EET" duration-ms="410" status="PASS">
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:com.tests.YoutubeSearch@35cabb2a]" started-at="2025-04-12T23:19:05 EET" name="tearDownTest" finished-at="2025-04-12T23:19:06 EET" duration-ms="884" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:com.tests.YoutubeSearch@35cabb2a]" started-at="2025-04-12T22:55:20 EET" name="tearDownTest" finished-at="2025-04-12T22:55:20 EET" duration-ms="364" status="PASS">
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:com.tests.YoutubeSearch@35cabb2a]" started-at="2025-04-12T23:19:37 EET" name="tearDownTest" finished-at="2025-04-12T23:19:38 EET" duration-ms="379" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="setupTest()[pri:0, instance:com.tests.YoutubeSearch@35cabb2a]" started-at="2025-04-12T22:55:20 EET" name="setupTest" finished-at="2025-04-12T22:55:30 EET" duration-ms="10336" status="PASS">
+        <test-method is-config="true" signature="setupTest()[pri:0, instance:com.tests.YoutubeSearch@35cabb2a]" started-at="2025-04-12T23:19:38 EET" name="setupTest" finished-at="2025-04-12T23:19:43 EET" duration-ms="5736" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="searchYoutubeAndAssertThirdResultIsCorrect(java.lang.String)[pri:0, instance:com.tests.YoutubeSearch@35cabb2a]" started-at="2025-04-12T22:55:30 EET" name="searchYoutubeAndAssertThirdResultIsCorrect" data-provider="Search Keywords" finished-at="2025-04-12T22:55:38 EET" duration-ms="7322" status="FAIL">
+        <test-method signature="searchYoutubeAndAssertThirdResultIsCorrect(java.lang.String)[pri:0, instance:com.tests.YoutubeSearch@35cabb2a]" started-at="2025-04-12T23:19:43 EET" name="searchYoutubeAndAssertThirdResultIsCorrect" data-provider="Search Keywords" finished-at="2025-04-12T23:20:22 EET" duration-ms="38447" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -147,43 +147,28 @@ at java.base/java.lang.Thread.run(Thread.java:1583)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[element not interactable: element has zero size
-  (Session info: chrome=135.0.7049.85)
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: (//yt-formatted-string[contains(@class, 'ytd-watch-metadata')])[1] (tried for 30 second(s) with 500 milliseconds interval)
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [67c6601162b9ee8af9f618b8ca5cbbad, clickElement {id=f.E3D52D0EDF06902BF9903B7264F2B1EC.d.D7650B9C50DE09F1A909ED765A7BCCBF.e.117}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51866}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51866/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (67c6601162b9ee8af9f618b8ca5cbbad)] -> xpath: //ytd-video-renderer//a[@id='video-title']]
-Session ID: 67c6601162b9ee8af9f618b8ca5cbbad]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50753}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50753/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f130c13584dabbeeba8b225a36df1e44]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
-  (Session info: chrome=135.0.7049.85)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//yt-formatted-string[contains(@class, 'ytd-watch-metadata')])[1] (tried for 30 second(s) with 500 milliseconds interval)
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [67c6601162b9ee8af9f618b8ca5cbbad, clickElement {id=f.E3D52D0EDF06902BF9903B7264F2B1EC.d.D7650B9C50DE09F1A909ED765A7BCCBF.e.117}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51866}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51866/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (67c6601162b9ee8af9f618b8ca5cbbad)] -> xpath: //ytd-video-renderer//a[@id='video-title']]
-Session ID: 67c6601162b9ee8af9f618b8ca5cbbad
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at com.framework.ElementActions.getElementsByIndexAndClick(ElementActions.java:41)
-at com.pages.YoutubeResultPage.clickVideoByIndex(YoutubeResultPage.java:38)
-at com.tests.YoutubeSearch.searchYoutubeAndAssertThirdResultIsCorrect(YoutubeSearch.java:64)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50753}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50753/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f130c13584dabbeeba8b225a36df1e44
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.framework.Waiting.waitUntilElementIsVisible(Waiting.java:18)
+at com.framework.ElementActions.getText(ElementActions.java:54)
+at com.pages.YoutubeVideoPage.getTitle(YoutubeVideoPage.java:17)
+at com.tests.YoutubeSearch.searchYoutubeAndAssertThirdResultIsCorrect(YoutubeSearch.java:65)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -202,11 +187,11 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchYoutubeAndAssertThirdResultIsCorrect -->
-        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:com.tests.YoutubeSearch@35cabb2a]" started-at="2025-04-12T22:55:38 EET" name="tearDownTest" finished-at="2025-04-12T22:55:38 EET" duration-ms="666" status="PASS">
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:com.tests.YoutubeSearch@35cabb2a]" started-at="2025-04-12T23:20:22 EET" name="tearDownTest" finished-at="2025-04-12T23:20:22 EET" duration-ms="361" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->

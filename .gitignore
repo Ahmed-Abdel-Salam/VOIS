@@ -1,0 +1,40 @@
+# Maven
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# VS Code
+.vscode/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Test reports (Allure, ExtentReports)
+allure-results/
+allure-report/
+test-output/
+extent-report.html
+
+# Environment or secret files
+.env
+*.env
+
+# Cache and temporary files
+*.class
+*.swp
+*.tmp
+
+# Build tools
+.gradle/
+build/

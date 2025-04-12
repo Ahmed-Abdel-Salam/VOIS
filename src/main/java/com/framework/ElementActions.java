@@ -20,6 +20,11 @@ public class ElementActions {
         }
     }
 
+    public static WebElement getElement(By locator, WebDriver driver) {
+        Waiting.waitUntilElementIsVisible(locator, duration, driver);
+        return driver.findElement(locator);
+    }
+
     public static WebElement getElementsByIndex(By locator, WebDriver driver, int index) {
         Waiting.waitUntilElementIsClickable(locator, duration, driver);
         List<WebElement> elements = driver.findElements(locator);

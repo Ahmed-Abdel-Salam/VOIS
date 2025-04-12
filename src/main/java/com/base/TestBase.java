@@ -25,7 +25,7 @@ public class TestBase {
         }
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized", "--disable-notifications","--headless");
+        options.addArguments("--start-maximized", "--disable-notifications");
         driver.set(new ChromeDriver(options));
 
         WebDriverManager.chromedriver().setup();
