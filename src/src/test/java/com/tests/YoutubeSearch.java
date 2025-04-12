@@ -46,11 +46,12 @@ public class YoutubeSearch extends TestBase {
     }
 
     @BeforeMethod
-    public void setupTest() {
-        setup("https://www.youtube.com");
-        this.youtubeHomePage = new YoutubeHomePage(driver);
-        this.youtubeResultPage = new YoutubeResultPage(driver);
-        this.youtubeVideoPage = new YoutubeVideoPage(driver);
+    public void setupTest(String browser) {
+        setup(browser, "https://www.youtube.com");
+        this.youtubeHomePage = new YoutubeHomePage(getDriver());
+        this.youtubeResultPage = new YoutubeResultPage(getDriver());
+        this.youtubeVideoPage = new YoutubeVideoPage(getDriver());
+        System.out.println("Thread ID: " + Thread.currentThread().threadId());
     }
 
     @Test(dataProvider = "Search Keywords")
