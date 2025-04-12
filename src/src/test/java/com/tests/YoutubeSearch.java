@@ -22,7 +22,7 @@ public class YoutubeSearch extends TestBase {
     private YoutubeHomePage youtubeHomePage;
     private YoutubeResultPage youtubeResultPage;
     private YoutubeVideoPage youtubeVideoPage;
-//    private final String searchKeyword = "Selenium Tutorial";
+    private final String searchKeyword = "Selenium Tutorial";
 
     @DataProvider(name = "Search Keywords")
     public Object[][] providerSearchKeywords() throws IOException, URISyntaxException {
@@ -54,13 +54,24 @@ public class YoutubeSearch extends TestBase {
     }
 
     @Test(dataProvider = "Search Keywords")
-    public void searchYoutubeAndAssertResultIsCorrect(String keyword) {
+    public void searchYoutubeAndAssertThirdResultIsCorrect(String keyword) {
 //        System.out.println("This is it: " + keyword);
         youtubeHomePage.searchYoutubeByKeyword(keyword);
         youtubeResultPage.clickOnFiltersButton();
         youtubeResultPage.clickOnFilterTypeVideo();
-        String title1 = youtubeResultPage.getThirdVideoTitle();
-        youtubeResultPage.clickThirdVideo(youtubeResultPage.getVideoTitleXPath(title1));
+        String title1 = youtubeResultPage.getVideoTitleByIndex(2);
+        youtubeResultPage.clickVideoByIndex(2);
+        String title2 = youtubeVideoPage.getTitle();
+        youtubeVideoPage.assertThatTitlesAreEqual(title1, title2);
+    }
+
+    @Test
+    public void searchYoutubeAndAssertTenthResultIsCorrect() {
+        youtubeHomePage.searchYoutubeByKeyword(searchKeyword);
+        youtubeResultPage.clickOnFiltersButton();
+        youtubeResultPage.clickOnFilterTypeVideo();
+        String title1 = youtubeResultPage.getVideoTitleByIndex(9);
+        youtubeResultPage.clickVideoByIndex(9);
         String title2 = youtubeVideoPage.getTitle();
         youtubeVideoPage.assertThatTitlesAreEqual(title1, title2);
     }

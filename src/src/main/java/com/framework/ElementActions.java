@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.time.Duration;
+import java.util.List;
 
 public class ElementActions {
 
@@ -19,6 +20,16 @@ public class ElementActions {
         } catch (StaleElementReferenceException e) {
             driver.findElement(locator).click();
         }
+    }
+
+    public static WebElement getElementsByIndex(By locator, WebDriver driver, int index) {
+        List<WebElement> elements = driver.findElements(locator);
+        return elements.get(index);
+    }
+
+    public static void getElementsByIndexAndClick(By locator, WebDriver driver, int index) {
+        List<WebElement> elements = driver.findElements(locator);
+        elements.get(index).click();
     }
 
     public static void typeText(By locator, WebDriver driver, String text) {
