@@ -34,6 +34,14 @@ public class YoutubeResultPage extends TestBase {
         ElementActions.getElementsByIndexAndClick(videoElementPath, driver, index);
     }
 
+    public static By getVideoByTitle(String title) {
+        return By.xpath("//a[@title=\"" + title + "\"]");
+    }
+
+    public void clickVideoByTitle(String title) {
+        ElementActions.click(getVideoByTitle(title), driver);
+    }
+
     public By getVideoTitleXPath(String videoTitle) {
         return By.xpath("//a[@title=\"" + videoTitle + "\"]");
     }

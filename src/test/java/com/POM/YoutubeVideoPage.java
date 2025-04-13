@@ -8,7 +8,7 @@ import org.testng.Assert;
 
 public class YoutubeVideoPage {
     private final WebDriver driver;
-    By videoTitle = By.xpath("//div[@id=\"above-the-fold\"]/div[@id='title']//yt-formatted-string");
+    By videoTitle = By.xpath("//yt-formatted-string[@title][.//ancestor::div[@id='title']]");
 
     public YoutubeVideoPage(WebDriver driver) {
         this.driver = driver;

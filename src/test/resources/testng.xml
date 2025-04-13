@@ -3,6 +3,7 @@
     <test name="Chrome Test">
         <classes>
             <class name="com.tests.YoutubeSearch"/>
+            <class name="com.tests.APITest"/>
         </classes>
     </test>
 </suite>

@@ -1,11 +1,15 @@
 package com.tests;
 
+import com.aventstack.extentreports.ExtentTest;
 import com.base.TestBase;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.POM.YoutubeHomePage;
 import com.POM.YoutubeResultPage;
 import com.POM.YoutubeVideoPage;
+import com.framework.ReportManager;
+import com.framework.Waiting;
+import org.openqa.selenium.By;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -16,6 +20,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.time.Duration;
+import java.util.TimerTask;
 
 public class YoutubeSearch extends TestBase {
 
@@ -40,9 +46,7 @@ public class YoutubeSearch extends TestBase {
         String keyword1 = keywordsNode.get("Search Keyword 1").asText();
         String keyword2 = keywordsNode.get("Search Keyword 2").asText();
 
-        return new Object[][]{
-                {keyword1}, {keyword2}
-        };
+        return new Object[][]{{keyword1}, {keyword2}};
     }
 
     @BeforeMethod
@@ -51,30 +55,45 @@ public class YoutubeSearch extends TestBase {
         this.youtubeHomePage = new YoutubeHomePage(getDriver());
         this.youtubeResultPage = new YoutubeResultPage(getDriver());
         this.youtubeVideoPage = new YoutubeVideoPage(getDriver());
-        System.out.println("Thread ID: " + Thread.currentThread().threadId());
     }
 
     @Test(dataProvider = "Search Keywords")
     public void searchYoutubeAndAssertThirdResultIsCorrect(String keyword) {
-//        System.out.println("This is it: " + keyword);
-        youtubeHomePage.searchYoutubeByKeyword(keyword);
-        youtubeResultPage.clickOnFiltersButton();
-        youtubeResultPage.clickOnFilterTypeVideo();
-        String title1 = youtubeResultPage.getVideoTitleByIndex(2);
-        youtubeResultPage.clickVideoByIndex(2);
-        String title2 = youtubeVideoPage.getTitle();
-        youtubeVideoPage.assertThatTitlesAreEqual(title1, title2);
+        ExtentTest test = ReportManager.getInstance().createTest("Search Test: " + keyword);
+        try {
+            youtubeHomePage.searchYoutubeByKeyword(keyword);
+            youtubeResultPage.clickOnFiltersButton();
+            youtubeResultPage.clickOnFilterTypeVideo();
+            String title1 = youtubeResultPage.getVideoTitleByIndex(2);
+            youtubeResultPage.clickVideoByTitle(title1);
+            String title2 = youtubeVideoPage.getTitle();
+            youtubeVideoPage.assertThatTitlesAreEqual(title1, title2);
+            test.pass("Test passed");
+        } catch (Exception e) {
+            test.fail("Test failed: " + e.getMessage());
+            throw e;
+        }
     }
 
     @Test
     public void searchYoutubeAndAssertTenthResultIsCorrect() {
-        youtubeHomePage.searchYoutubeByKeyword(searchKeyword);
-        youtubeResultPage.clickOnFiltersButton();
-        youtubeResultPage.clickOnFilterTypeVideo();
-        String title1 = youtubeResultPage.getVideoTitleByIndex(9);
-        youtubeResultPage.clickVideoByIndex(9);
-        String title2 = youtubeVideoPage.getTitle();
-        youtubeVideoPage.assertThatTitlesAreEqual(title1, title2);
+        ExtentTest test = ReportManager.getInstance().createTest("Search Test2: ");
+        try {
+            youtubeHomePage.searchYoutubeByKeyword(searchKeyword);
+            youtubeResultPage.clickOnFiltersButton();
+            youtubeResultPage.clickOnFilterTypeVideo();
+            String title1 = youtubeResultPage.getVideoTitleByIndex(9);
+            System.out.println("Title 1: " + title1);
+            youtubeResultPage.clickVideoByTitle(title1);
+            String title2 = youtubeVideoPage.getTitle();
+            System.out.println("Title 2: " + title2);
+            youtubeVideoPage.assertThatTitlesAreEqual(title1, title2);
+            test.pass("Test passed");
+        } catch (Exception e) {
+            test.fail("Test failed: " + e.getMessage());
+            throw e;
+        }
+
     }
 
     @AfterMethod

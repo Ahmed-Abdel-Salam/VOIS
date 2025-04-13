@@ -1,6 +1,8 @@
 package com.base;
 
+import com.framework.Waiting;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -30,6 +32,13 @@ public class TestBase {
 
         WebDriverManager.chromedriver().setup();
         getDriver().get(url);
+
+        Waiting.waitUntilElementIsVisible(
+                By.tagName("body"),
+                Duration.ofSeconds(30),
+                getDriver()
+        );
+
     }
 
     public void tearDown() {
