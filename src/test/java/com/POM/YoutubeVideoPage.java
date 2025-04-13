@@ -1,4 +1,4 @@
-package com.pages;
+package com.POM;
 
 import com.framework.ElementActions;
 import org.openqa.selenium.By;

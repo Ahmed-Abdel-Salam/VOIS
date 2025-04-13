@@ -1,4 +1,4 @@
-package com.pages;
+package com.POM;
 
 import com.base.TestBase;
 import com.framework.ElementActions;
