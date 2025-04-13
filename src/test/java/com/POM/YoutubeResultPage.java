@@ -10,7 +10,6 @@ public class YoutubeResultPage extends TestBase {
     private final WebDriver driver;
     private final By filterButton = By.xpath("//button[@aria-label=\"Search filters\"]");
     private final By typeVideo = By.xpath("//div[@title=\"Search for Video\"]");
-    private final By thirdVideoToClick = By.xpath("(//a[@id=\"video-title\"])[3]");
     private final By videoElementPath = By.xpath("//ytd-video-renderer//a[@id='video-title']");
 
     public YoutubeResultPage(WebDriver driver) {

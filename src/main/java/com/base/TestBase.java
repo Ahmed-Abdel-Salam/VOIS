@@ -14,9 +14,6 @@ import java.time.Duration;
 public class TestBase {
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-    protected static final int IMPLICIT_WAIT = 10;
-    protected static final int PAGE_LOAD_TIMEOUT = 30;
-
     public WebDriver getDriver() {
         return driver.get();
     }
