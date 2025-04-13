@@ -13,9 +13,6 @@ public class YoutubeVideoPage {
     public YoutubeVideoPage(WebDriver driver) {
         this.driver = driver;
     }
-//    public String getTitle() {
-//        return ElementActions.getText(videoTitle, driver);
-//    }
 
     public String getTitle() {
         WebElement element = ElementActions.getElement(videoTitle, driver);

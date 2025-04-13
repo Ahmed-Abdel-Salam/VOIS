@@ -25,10 +25,6 @@ public class YoutubeResultPage extends TestBase {
         ElementActions.click(typeVideo, driver);
     }
 
-//    public By getVideoByIndex(int index) {
-//        return By.xpath("(//a[@id='video-title'])[" + index + "]");
-//    }
-
     public String getVideoTitleByIndex(int index) {
         WebElement element = ElementActions.getElementsByIndex(videoElementPath, driver, index);
         return element.getAttribute("title");
