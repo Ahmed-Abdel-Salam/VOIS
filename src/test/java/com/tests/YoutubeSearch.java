@@ -8,8 +8,6 @@ import com.POM.YoutubeHomePage;
 import com.POM.YoutubeResultPage;
 import com.POM.YoutubeVideoPage;
 import com.framework.ReportManager;
-import com.framework.Waiting;
-import org.openqa.selenium.By;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -20,8 +18,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.time.Duration;
-import java.util.TimerTask;
 
 public class YoutubeSearch extends TestBase {
 
@@ -59,7 +55,7 @@ public class YoutubeSearch extends TestBase {
 
     @Test(dataProvider = "Search Keywords")
     public void searchYoutubeAndAssertThirdResultIsCorrect(String keyword) {
-        ExtentTest test = ReportManager.getInstance().createTest("Search Test: " + keyword);
+        test = report.createTest("searchYoutubeAndAssertThirdResultIsCorrect");
         try {
             youtubeHomePage.searchYoutubeByKeyword(keyword);
             youtubeResultPage.clickOnFiltersButton();
@@ -77,6 +73,7 @@ public class YoutubeSearch extends TestBase {
 
     @Test
     public void searchYoutubeAndAssertTenthResultIsCorrect() {
+        test = report.createTest("searchYoutubeAndAssertTenthResultIsCorrect");
         ExtentTest test = ReportManager.getInstance().createTest("Search Test2: ");
         try {
             youtubeHomePage.searchYoutubeByKeyword(searchKeyword);
@@ -93,7 +90,6 @@ public class YoutubeSearch extends TestBase {
             test.fail("Test failed: " + e.getMessage());
             throw e;
         }
-
     }
 
     @AfterMethod
