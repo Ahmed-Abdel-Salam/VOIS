@@ -75,7 +75,7 @@ public class RestActions {
                 return response;
             case GET:
                 response = request.when().get().then().extract().response();
-                System.out.println("Response: [" + response.asString() + "].");
+//                System.out.println("Response: [" + response.asString() + "].");
                 return response;
             case DELETE:
                 response = request.when().delete().then().extract().response();
